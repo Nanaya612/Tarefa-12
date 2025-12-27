@@ -1,0 +1,45 @@
+@use 'variaveis';
+@use 'mixins';
+
+.body {
+    font-family: variaveis.$fontfamily;
+    @include mixins.fontsize(18px);
+    background-color: variaveis.$color1;
+}
+.header {
+    @include mixins.centralizar;
+    margin-bottom: 10px;
+    background-color: variaveis.$color2;
+    border: variaveis.$bordersection;
+    border-radius: 30px;
+}
+
+.nav {
+    display: flex;
+    @include mixins.centralizar;
+    padding: 0%;
+}
+.main {
+    display: block;
+    @include mixins.centralizar;
+    gap: variaveis.$gapmain;
+    background-color: variaveis.$color4;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 25px;
+}
+.form {
+    display: flexbox;
+    @include mixins.centralizar;
+    
+}
+
+@media(max-width: 1200px) {
+    .body{
+        @include mixins.fontsize(17px);
+    }
+    .header{
+        margin: 5vw;
+        margin: 5vh;
+    }
+}

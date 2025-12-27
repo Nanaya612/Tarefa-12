@@ -1,0 +1,87 @@
+@use 'variaveis';
+@use 'mixins';
+
+.nav__list {
+    display: flex;
+    gap: variaveis.$gap;
+    list-style-type: none;
+    @include mixins.centralizar;
+    @include mixins.fontsize(20px);
+    background-color: variaveis.$color3;
+    border: variaveis.$bordernav;
+    padding: 0%;
+}
+.nav__link {
+    text-decoration: none;
+    color: black;
+}
+.nav__link:hover {
+    @include mixins.fontsize(23px);
+    text-decoration: underline;
+}
+.main__section{
+    @include mixins.sectionsize(200px,350px);
+    border: variaveis.$bordersection;
+    background-color: variaveis.$color5;
+    @include mixins.centralizar;
+}
+.main__section--serviços{
+    @include mixins.sectionsize(200px,350px);
+    border: variaveis.$bordersection;
+    background-color: variaveis.$color5;
+    @include mixins.centralizar;
+}
+.main__section--depoimento{
+    @include mixins.sectionsize(300px,390px);
+    border: variaveis.$bordersection;
+    background-color: variaveis.$color5;
+    @include mixins.centralizar;
+}
+.main__section--contatos{
+    @include mixins.sectionsize(250px,350px);
+    border: variaveis.$bordersection;
+    background-color: variaveis.$color5;
+    @include mixins.centralizar;
+}
+.form__item {
+    display: block;
+    border: variaveis.$borderform;
+    @include mixins.formdisplay(1.5em,14em)
+}
+.form__item--mensagem {
+    display: block;
+    border: variaveis.$borderform;
+    @include mixins.formdisplay(2.6em,14em)
+}
+.button {
+    border: variaveis.$borderform;
+    background-color: variaveis.$color3;
+    color: variaveis.$color4;
+    border-radius: 9px;
+}
+
+@media(max-width: 600px) {
+    
+    .main__section {
+        @include mixins.sectionsize(180px,320px)
+    }
+}
+@media(max-width:1200px) {
+    .nav__list {
+        margin-bottom: 50px;
+    }
+    .main__section {
+        @include mixins.sectionsize(180px,340px);
+    }
+    button {
+        margin-top: 6px;
+    }
+    .form__item{
+        @include mixins.formdisplay1200;
+        border: variaveis.$borderform;
+    }
+    .form__item--mensagem {
+        @include mixins.formdisplay1200;
+        border: variaveis.$borderform;
+    }
+}

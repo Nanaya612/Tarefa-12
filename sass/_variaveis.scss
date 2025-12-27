@@ -1,0 +1,13 @@
+@use "sass:math";
+
+$fontfamily: Arial, Helvetica, sans-serif;
+$color1: rgb(204, 199, 199);
+$color2: rgb(235, 74, 106);
+$color3: rgb(50, 108, 216);
+$color4: white;
+$color5: lightgreen;
+$gap: 20px;
+$gapmain: calc($gap + 30px);
+$bordersection: 5px ridge black;
+$borderform: 2px solid transparent;
+$bordernav: 7px outset rgb(50, 108, 216);

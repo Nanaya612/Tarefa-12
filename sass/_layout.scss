@@ -1,0 +1,35 @@
+@use 'mixins';
+@use 'variaveis';
+
+.main__section--serviços {           
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 42vh;
+}
+.main__section--serviços:nth-child(1) {
+    grid-column: 1/1;
+    grid-row: 1/2;
+    @include mixins.centralizar;
+}
+.main__section--serviços:nth-child(2) {
+    grid-column: 1/1;
+    grid-row: 2/3;
+    @include mixins.centralizar;
+}
+.main__section--serviços:nth-child(3) {
+    grid-column: 1/1;
+    grid-row: 3/4;
+    @include mixins.centralizar;
+}
+
+@media (max-width:1200px) {
+    .main__section--serviços{
+        min-height: 38vh;
+    }
+}
+@media (max-width:600px) {
+    .main__section--serviços{
+        min-height: 35vh;
+    }
+}

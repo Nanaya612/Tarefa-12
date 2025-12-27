@@ -1,0 +1,31 @@
+@mixin centralizar {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin fontsize($fontsize){
+    font-size: $fontsize;
+}
+@mixin sectionsize($h,$w) {
+    margin: auto;
+    padding: auto;
+    margin-bottom: 15px;
+    height: $h;
+    width: $w;
+}
+@mixin formdisplay1200 {
+    margin-left: 95px;
+    margin-top: 8px;
+    width: 9em;
+    height: 0.9em;
+    display: block;
+    border-radius: 10px;
+}
+@mixin formdisplay($h,$w) {
+    border-radius: 10px;
+    width: $w;
+    height: $h;
+    margin-left: 75px;
+    margin-top: 6px;
+}
